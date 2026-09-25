@@ -20,18 +20,19 @@
 
 上面每行对应根目录里的一个 `.py` 文件，文件名自带版本号，比如 `音量处理_v1.5.py`。
 
-## 二、新电脑第一件事：装 Python
+## 二、新电脑第一件事：装 Python(一键安装-简单)
 
 脚本都是 Python 写的，一台电脑只需要装一次，全程不用改任何设置。
 
 1. 打开 <https://www.python.org/downloads/>，点那个黄色按钮 `Download Python 3.x.x` 下载，然后双击安装包（3.12 或更新的都行）。
-2. 第一屏最下面有个勾选框，**一定要勾上**（不勾后面会提示"不是内部或外部命令"）：
+2.  `Customize installation`(自定义安装)
+3. 第一屏最下面有个勾选框，**一定要勾上**（不勾后面会提示"不是内部或外部命令"）：
 
    - `Add python.exe to PATH`
 
    勾完直接点 `Install Now`。
 
-3. 如果你点的是 `Customize installation`，那第二页（Optional Features）要保证这两个是勾上的：
+3.有这个limit直接点击
 
    - `pip`
    - `Add Python to environment variables`
