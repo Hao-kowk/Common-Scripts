@@ -1,0 +1,19 @@
+@echo off
+chcp 65001 >nul
+setlocal enabledelayedexpansion
+
+:: ========== 第一步：提取所有子文件夹中的文件到当前文件夹 ==========
+echo 正在提取子文件夹中的文件...
+set "curdir=%cd%"
+for /r %%f in (*) do (
+    set "filepath=%%f"
+    set "filename=%%~nxf"
+    :: 如果文件不在当前文件夹，则移动过来
+    set "filedir=%%~dpf"
+    if not "!filedir!"=="%curdir%\" (
+        echo 移动文件：!filename!
+        move "%%f" "%curdir%\!filename!" >nul 2>&1
+    )
+)
+echo 提取完成！
+echo.

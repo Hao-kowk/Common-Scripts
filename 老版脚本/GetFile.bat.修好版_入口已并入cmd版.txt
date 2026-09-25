@@ -1,0 +1,7 @@
+@echo off
+setlocal
+rem 这是修好的版本：重名不会覆盖，会停下来让你选处理方式
+rem 实际逻辑在 cmd版\提取文件_v1.0.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0cmd版\提取文件_v1.0.ps1" %*
+echo.
+pause

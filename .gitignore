@@ -1,0 +1,13 @@
+# 系统 / 临时文件
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+
+# 脚本运行时产生的缓存和输出
+.asr_cache.json
+_处理后/
+
+# 编辑器
+.vscode/
+.idea/

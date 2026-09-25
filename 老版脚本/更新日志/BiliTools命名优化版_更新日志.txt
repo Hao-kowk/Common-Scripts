@@ -1,0 +1,21 @@
+﻿BiliTools 命名优化版  更新日志
+====================
+基础版本：BiliTools 1.4.6（作者已于 2026-07 停止维护）
+软件内标识：关于页显示 v1.4.6 命名优化版
+文件：优化软件\BiliTools_1.4.6_命名优化版_x64-setup.exe（安装用）
+     优化软件\BiliTools_1.4.6_命名优化版.exe（替换用）
+
+2026-09-23
+  1. {showtitle} 改为优先使用「视频标题」（原版在合集里会被合集名覆盖，
+     导致不同期的文件名完全一样）→  src/services/media/data.ts
+  2. 新增模板函数 sub(起始,结束,{变量}) 取子串，
+     例如 sub(7,15,{showtitle}) → 2026/9/14  →  src/services/queue.ts
+
+2026-09-23
+  3. aria2 加 --file-allocation=none（不再预分配几 GB 磁盘空间）
+     并把本地接口超时 3 秒放宽到 60 秒，
+     修掉大文件下载时任务被误判失败、临时目录被清导致反复报错的死循环
+     →  src-tauri/src/services/aria2c.rs
+
+2026-09-25
+  4. 「关于」页显示 v1.4.6 命名优化版，便于和原版区分 →  src/views/InfoPage.vue

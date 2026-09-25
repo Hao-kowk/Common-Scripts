@@ -1,0 +1,9 @@
+﻿修复 BiliTools 下载记录  更新日志
+====================
+文件：修复bilitools记录_vX.py（入口：cmd版\修复记录.bat）
+用途：修掉界面报错 Cannot read properties of undefined (reading 'id') (Task.vue)
+
+v1.0  2026-09-22
+  原因：删掉下载任务后，数据库 schedulers 表里还留着已经不存在的任务编号。
+  做法：清掉这些无效编号；运行前自动整目录备份 Storage 数据库；
+       必须先完全退出 BiliTools，否则拒绝执行。
