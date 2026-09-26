@@ -35,7 +35,7 @@ cmd版  说明
       -OutDir "D:\输出"   指定输出目录
 
 
-三、更新 BiliTools（自用版：1.4.6 命名优化版）
+三、更新 BiliTools（自用版：4.63 命名优化版）
 ------------------------------------------------
 用途：把编译好的新版 BiliTools 替换到安装目录。
 用法：先完全退出 BiliTools（托盘图标也要退），再右键本文件 → 以管理员身份运行。
@@ -47,6 +47,6 @@ cmd版  说明
 原版 exe 备份在：C:\Program Files\InternetApp\CodexApps\BiliTools-构建\_原版备份\
 
 【自用版文件位置】
-  安装包（可拷到别的电脑安装）：C:\Program Files\InternetApp\CodexApps\BiliTools_1.4.6_命名优化版_x64-setup.exe
-  独立 exe（绿色版）：        C:\Program Files\InternetApp\CodexApps\BiliTools_1.4.6_命名优化版.exe
-  软件里怎么看版本：打开「关于」页，显示 v1.4.6 命名优化版
+  安装包（可拷到别的电脑安装）：C:\Program Files\InternetApp\CodexApps\BiliTools_4.63_命名优化版_x64-setup.exe
+  独立 exe（绿色版）：        C:\Program Files\InternetApp\CodexApps\BiliTools_4.63_命名优化版.exe
+  软件里怎么看版本：打开「关于」页，显示 v4.63 命名优化版

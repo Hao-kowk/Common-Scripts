@@ -3,25 +3,26 @@ chcp 936 >nul
 setlocal enabledelayedexpansion
 
 rem ============================================================
-rem 【备注】个人使用请直接用「BiliTools_1.4.6_命名优化版.exe」，不用跑本脚本。
+rem 【备注】个人使用请直接用「BiliTools_4.63_命名优化版.exe」，不用跑本脚本。
 rem         本脚本是给「已经装过 BiliTools」的电脑，把它的 exe 覆盖成优化版用的。
 rem ============================================================
 
 echo ============================================
-echo  更新 BiliTools 到「1.4.6 命名优化版」
+echo  更新 BiliTools 到「命名优化版」（当前 4.63）
 echo ============================================
 echo.
-echo 【提示】个人使用直接运行「BiliTools_1.4.6_命名优化版.exe」即可，本脚本只用于给已安装的 BiliTools 替换更新。
+echo 【提示】个人使用直接运行「BiliTools_4.63_命名优化版.exe」即可，本脚本只用于给已安装的 BiliTools 替换更新。
 echo.
 
 rem ---------- 1. 找新版 exe（就在本文件旁边）----------
 set "SRC="
-if exist "%~dp0BiliTools_1.4.6_命名优化版.exe" set "SRC=%~dp0BiliTools_1.4.6_命名优化版.exe"
+rem 同目录下名字带「命名优化版」的 exe（版本号变了也能自动找到）
+for %%F in ("%~dp0BiliTools_*_命名优化版.exe") do set "SRC=%%~fF"
 if not defined SRC if exist "%~dp0bilitools.exe" set "SRC=%~dp0bilitools.exe"
 if not defined SRC if exist "%~dp0..\BiliTools-构建\src-tauri\target\release\bilitools.exe" set "SRC=%~dp0..\BiliTools-构建\src-tauri\target\release\bilitools.exe"
 if not defined SRC (
   echo 【错误】没找到新版 exe。
-  echo   请把本文件和「BiliTools_1.4.6_命名优化版.exe」放在同一个文件夹里。
+  echo   请把本文件和「BiliTools_4.63_命名优化版.exe」放在同一个文件夹里。
   echo.
   pause
   exit /b 1
@@ -68,8 +69,8 @@ if errorlevel 1 (
   echo   2. 没有管理员权限 —— 右键本文件，选「以管理员身份运行」
 ) else (
   echo.
-  echo 【成功】已替换成「1.4.6 命名优化版」。
-  echo 打开软件后看「关于」页，会显示：v1.4.6 命名优化版
+  echo 【成功】已替换成「命名优化版（4.63）」。
+  echo 打开软件后看「关于」页，会显示：v4.63 命名优化版
 )
 echo.
 pause
